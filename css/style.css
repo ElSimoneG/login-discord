@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 580px;
+    background-image: url('https://cybertips.io/wp-content/uploads/2021/09/discord.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.form-container {
+    display: flex;
+    background-color: #36393F;
+    color: white;
+    border-radius: 5px;
+    padding: 40px;
+    gap: 75px;
+    /* COPIADO EXACTAMENTE DE LA PAGINA, ASI Q NO SE COMO FUNCIONA :) */
+    box-shadow: 0 2px 10px 0 hsla(0,calc(var(--saturation-factor, 1)*0%),0%,.2);
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.form-container .login-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    width: 430px;
+    gap: 15px;
+    flex: 1;
+}
+
+/* HEADER DEL CONTENEDOR DEL FORMULARIO */
+.form-container .login-container .login-header {
+    text-align: center;
+}
+
+.form-container .login-container .login-header h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.form-container .login-container .login-header span {
+    color: #B9BBBE;
+    font-weight: 500;
+}
+
+.form-container .login-container .login-header .discord-logo {
+    width: 150px;
+    display: none;
+}
+
+.form-container .login-container .email-div {
+    margin-bottom: 20px;
+}
+
+.form-container .login-container label {
+    display: block;
+    color: #B9BBBE;
+    margin-bottom: 8px;
+}
+
+.form-container .login-container input {
+    display: block;
+    width: 100%;
+    background-color: #202225;
+    color: #B9BBBE;
+    border: none;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.form-container .login-container input:focus {
+    outline: none;
+}
+
+.form-container .login-container a {
+    color: #00ACF1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.form-container .login-container a:hover{
+    text-decoration: underline;
+}
+
+.form-container .login-container .btn-submit {
+    border-radius: 3px;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 17px;
+    background-color: #5865F2;
+    color: white;
+    transition: background-color .3s;
+    margin-top: 20px;
+}
+
+.form-container .login-container .btn-submit:hover {
+    background-color: #4752C4;
+    transition: background-color .3s;
+}
+
+.form-container .login-container .register-link {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.form-container .login-container .register-link span {
+    color: #72767d;
+}
+
+/* CONTENEDOR DEL CODIGO QR */
+.form-container .qr-container {
+    width: 240px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.form-container .qr-container .qr-img img {
+    width: 190px;
+    height: 190px;
+    border-radius: 3px;
+}
+
+.form-container .qr-container .qr-body h3 {
+    font-size: 27px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.form-container .qr-container .qr-body .qr-description{
+    color: #B9BBBE;
+    font-weight: 300;
+}
+
+/* RESPOSIVE */
+@media screen and (max-width: 830px) {
+    .form-container .qr-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    body {
+        overflow: hidden;
+    }
+
+    .form-container .login-container .login-header .discord-logo {
+        display: inline;
+    }
+
+    .form-container .qr-container {
+        display: none;
+    }
+
+    .form-container {
+        height: 100vh;
+        width: 100vh;
+        padding: 15px;
+    }
+
+    .form-container .login-container{
+        width: 100%;
+    }
+}
